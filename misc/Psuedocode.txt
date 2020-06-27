@@ -1,0 +1,43 @@
+Full Stack Application
+Enter Burger
+Moves to Devour it
+Click Devour it, moves to right list
+
+
+Theme - Krusty Krab
+
+
+Steps - 
+Get General website working
+Add Theme elements to CSS for design
+
+SQL-
+Needs menu item and needs boolean value for if the item has been devoured
+
+
+Steps for building:
+
+1. Build out folders and files 
+2. Add CDNs to main.handlebars folder
+3. Build basic display to index.handlebars
+4. Build route to main page for '/' to show the index page
+5. Add text area and submit button form to 
+6. Build in logic to public assets js file to take input from form and add it to the db
+7. Build logic to display the burgers in the db to the devour it volumn
+8. Build logic for devour it button to change state of object from is_devoured true to false when clicked
+9. Build logic for already devoured burgers to populate to the left column
+
+Process.
+
+1. Add Burger:
+Uses input text area and submit button in form to add Burger
+Steps:
+
+
+2. Burger Added/Pending Devour
+Burger is then added to list on the left with a button to devour the Burger
+
+
+3. Devoured Burger 
+Once burger devour button is clicked, the item is moved to the list on the right for devoured burgers
+
