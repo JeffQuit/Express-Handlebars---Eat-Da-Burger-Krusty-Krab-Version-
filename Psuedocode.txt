@@ -1,0 +1,15 @@
+Full Stack Application
+Enter Burger
+Moves to Devour it
+Click Devour it, moves to right list
+
+
+Theme - Krusty Krab
+
+
+Steps - 
+Get General website working
+Add Theme elements to CSS for design
+
+SQL-
+Needs menu item and needs boolean value for if the item has been devoured
