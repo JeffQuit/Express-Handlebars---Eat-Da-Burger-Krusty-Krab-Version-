@@ -19,7 +19,7 @@ $(function () {
 
 	$('#unDevouredBurger').on('click', function (event) {
 		var id = $(this).data('mealid');
-
+		console.log(id);
 		var devourBurgerAction = {
 			is_devour: 1,
 		};
