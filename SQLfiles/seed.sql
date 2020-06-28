@@ -12,8 +12,8 @@ VALUES ('Coral Bits', false);
 INSERT INTO menu (menu_item, is_devour) 
 VALUES ('Kelp Rings', false);
 INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Krabby Meal', false);
+VALUES ('Krabby Meal', true);
 INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Double Krabby Meal', false);
+VALUES ('Double Krabby Meal', true);
 INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Tripple Krabby Meal', false);
+VALUES ('Tripple Krabby Meal', true);

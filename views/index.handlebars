@@ -1,17 +1,40 @@
 <h1>The Krusty Krab!</h1>
+<div class="unDevoured">
+  <h3>Meals Ready To Be Devoured!</h3>
+  <ol>
+    {{#each menu}}
+    {{#unless is_devour}}
+    <li>
+      <p>
+      <form id="devBurger" method="PUT" data-mealid-form="{{id}}">
+        Burger Type: {{menu_item}} <button id="unDevouredBurger" data-mealid="{{id}}" method="PUT"> Devour
+          It!
+        </button>
+      </form>
+      </p>
+    </li>
+    {{/unless}}
+    {{/each}}
+  </ol>
+</div>
 
-<ul>
-  {{#each menu}}
-  <li>
-    <p>
-      Burger Type: {{menu_item}}
-    </p>
-  </li>
-  {{/each}}
-</ul>
+<div class="alreadyDevoured">
+  <h3>Meals You Have Devoured!</h3>
+  <ol>
+    {{#each menu}}
+    {{#if is_devour}}
+    <li>
+      <p>
+        Burger Type: {{menu_item}}
+      </p>
+    </li>
+    {{/if}}
+    {{/each}}
+  </ol>
+</div>
 
 <h2>Add A Menu Item You Want To Consume!</h2>
-<form id="createplan" class="button-size">
-  <textarea type="text" name="typeBurger"></textarea>
+<form id="createmeal" class="button-size">
+  <textarea type="text" name="menu_item" id="menu_item"></textarea>
   <button type="submit">Add Burger!</button>
 </form>

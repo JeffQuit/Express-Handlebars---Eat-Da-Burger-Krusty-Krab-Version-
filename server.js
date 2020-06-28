@@ -24,6 +24,28 @@ app.get('/', function (req, res) {
 	});
 });
 
+app.post('/api/menu', function (req, res) {
+	connection.query('INSERT INTO menu (menu_item) VALUES (?)', [req.body.menu_item], function (err, result) {
+		if (err) {
+			return res.status(500).end();
+		}
+
+		res.json({ id: result.insertId });
+		console.log({ id: result.insertId });
+	});
+});
+
+app.put('/api/menu/:id', function (req, res) {
+	connection.query('UPDATE menu SET is_devour = 1 WHERE id = ?', [req.params.id], function (err, result) {
+		if (err) {
+			return res.status(500).end();
+		} else if (result.changedRows === 0) {
+			return res.status(404).end();
+		}
+		res.status(200).end();
+	});
+});
+
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function () {
 	// Log (server-side) when our server has started

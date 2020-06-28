@@ -1,41 +1,35 @@
-$('#createplan').on('submit', function (event) {
-	// Make sure to preventDefault on a submit event.
-	event.preventDefault();
+$(function () {
+	$('#createmeal').on('submit', function (event) {
+		event.preventDefault();
 
-	// [name=plan] will find an element with a "name" attribute equal to the string "plan"
-	var newPlan = {
-		plan: $('#createplan [name=plan]').val().trim(),
-	};
+		var newMeal = {
+			menu_item: $('#menu_item').val().trim(),
+		};
+		console.log(newMeal);
 
-	// Send the POST request.
-	$.ajax('/api/plans', {
-		type: 'POST',
-		data: newPlan,
-	}).then(function () {
-		console.log('created new plan');
-		// Reload the page to get the updated list
-		location.reload();
+		$.ajax('/api/menu', {
+			type: 'POST',
+			data: newMeal,
+		}).then(function () {
+			console.log('Added New Meal!');
+
+			location.reload();
+		});
 	});
-});
 
-$('#updateplan').on('submit', function (event) {
-	// Make sure to preventDefault on a submit event.
-	event.preventDefault();
+	$('#unDevouredBurger').on('click', function (event) {
+		var id = $(this).data('mealid');
 
-	// Get the ID by finding an element with a "name" attribute equal to the string "id"
-	var id = $('[name=id]').val().trim();
+		var devourBurgerAction = {
+			is_devour: 1,
+		};
 
-	var updatedPlan = {
-		plan: $('#updateplan [name=plan]').val().trim(),
-	};
-
-	// Send the PUT request.
-	$.ajax('/api/plans/' + id, {
-		type: 'PUT',
-		data: updatedPlan,
-	}).then(function () {
-		console.log('updated id ', id);
-		// Reload the page to get the updated list
-		location.reload();
+		$.ajax('/api/menu/' + id, {
+			type: 'PUT',
+			data: devourBurgerAction,
+		}).then(function () {
+			console.log('updated id ', id);
+			location.reload();
+		});
 	});
 });
