@@ -2,7 +2,7 @@ $(function () {
 	$('#createmeal').on('submit', function (event) {
 		event.preventDefault();
 
-		var newMeal = {
+		const newMeal = {
 			menu_item: $('#menu_item').val().trim(),
 		};
 		console.log(newMeal);
@@ -18,9 +18,9 @@ $(function () {
 	});
 
 	$('#unDevouredBurger').on('click', function (event) {
-		var id = $(this).data('mealid');
+		const id = $(this).data('mealid');
 		console.log(id);
-		var devourBurgerAction = {
+		const devourBurgerAction = {
 			is_devour: 1,
 		};
 

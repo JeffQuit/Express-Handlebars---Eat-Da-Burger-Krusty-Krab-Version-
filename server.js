@@ -1,8 +1,8 @@
-var express = require('express');
-var exphbs = require('express-handlebars');
-var app = express();
+const express = require('express');
+const exphbs = require('express-handlebars');
+const app = express();
 
-var PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8082;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
