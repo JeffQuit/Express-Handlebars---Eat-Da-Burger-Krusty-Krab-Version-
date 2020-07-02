@@ -63,7 +63,7 @@ Other credits include: Google Fonts, Font Awesome, and Bootstrap.
 
     								MIT License
 
-    		Unit 12 MySQL Homework: Employee Tracker   Copyright (C) 2020 Jeffrey Quittman
+    		Unit 13 Express-Handlebars: Eat-Da-Burger!   Copyright (C) 2020 Jeffrey Quittman
 
     		Permission is hereby granted, free of charge, to any person obtaining a copy
     		of this software and associated documentation files (the "Software"), to deal
