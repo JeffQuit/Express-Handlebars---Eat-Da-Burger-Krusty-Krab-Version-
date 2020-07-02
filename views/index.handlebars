@@ -1,40 +1,65 @@
-<h1>The Krusty Krab!</h1>
-<div class="unDevoured">
-  <h3>Meals Ready To Be Devoured!</h3>
-  <ol>
-    {{#each menu}}
-    {{#unless is_devour}}
-    <li>
-      <p>
-      <form id="devBurger" method="PUT" data-mealid-form="{{id}}">
-        Burger Type: {{menu_item}} <button id="unDevouredBurger" data-mealid="{{id}}" method="PUT"> Devour
-          It!
-        </button>
-      </form>
-      </p>
-    </li>
-    {{/unless}}
-    {{/each}}
-  </ol>
-</div>
+<div class="bg"></div>
+<div class="centerFrame">
+  <h1 class="title">The Krusty Krab!</h1>
+  <h4 class="slogan">Come Spend Your Money Here!</h4>
+  <div class="container">
+    <div class="row">
+      <div class="centerdivcols col">
+        <h3 class="colHeader">Meals Ready To Be Devoured!</h3>
+        <ol class="olStyle">
+          {{#each menu}}
+          {{#unless is_devour}}
+          <li>
 
-<div class="alreadyDevoured">
-  <h3>Meals You Have Devoured!</h3>
-  <ol>
-    {{#each menu}}
-    {{#if is_devour}}
-    <li>
-      <p>
-        Burger Type: {{menu_item}}
-      </p>
-    </li>
-    {{/if}}
-    {{/each}}
-  </ol>
-</div>
+            <form id="devBurger" method="PUT" data-mealid-form="{{id}}">
+              <p class="menuItemP">
+                {{menu_item}} <button id="unDevouredBurger" data-mealid="{{id}}" method="PUT"> <i
+                    class="fas fa-utensils"></i>
+                </button></p>
+            </form>
 
-<h2>Add A Menu Item You Want To Consume!</h2>
-<form id="createmeal" class="button-size">
-  <textarea type="text" name="menu_item" id="menu_item"></textarea>
-  <button type="submit">Add Burger!</button>
-</form>
+          </li>
+          {{/unless}}
+          {{/each}}
+        </ol>
+      </div>
+      <div class="centerdivcols col-4">
+        <img src="https://i.imgur.com/2U7Bc87.jpg" id="menuIMG">
+      </div>
+      <div class="centerdivcols col">
+        <h3 class="colHeader">Meals You Have Devoured!</h3>
+        <ol class="olStyle">
+          {{#each menu}}
+          {{#if is_devour}}
+          <li>
+            <p class="menuItemP">
+              {{menu_item}}
+            </p>
+          </li>
+          {{/if}}
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+
+      </div>
+      <div class="addMenuDiv col-7">
+        <h2 class="bottomEnterMenu">Add A Menu Item You Want To Consume!</h2>
+        <form id="createmeal" class="button-size">
+          <div>
+            <textarea class="textAreaBottom" type="text" name="menu_item" id="menu_item"
+              placeholder="A Krabby Patty Maybe???"></textarea>
+          </div>
+          <button class="buttonBottom" type="submit">Add A Meal!</button>
+        </form>
+
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+  </div>
+
+</div>

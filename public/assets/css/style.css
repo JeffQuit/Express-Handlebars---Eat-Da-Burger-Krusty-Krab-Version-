@@ -1,0 +1,143 @@
+html {
+	background-color: white;
+	font-size: 16px;
+	font-family: 'Slackey', cursive;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+}
+
+.bg {
+	background-image: url('https://i.imgur.com/moYbLjf.jpg');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.centerFrame {
+	background-color: #89d0c1;
+	height: 90vh;
+	width: 70vw;
+	border-radius: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	border: #5ab2a1 0.1rem solid;
+	box-shadow: 3px 7px 10px #bbbea5;
+}
+
+.container {
+	position: relative;
+	height: 75%;
+	margin-top: 10px;
+}
+
+.title {
+	font-family: 'Slackey', cursive;
+	font-size: 4rem;
+	color: #cf2326;
+	text-align: center;
+	padding-top: 1rem;
+	text-shadow: 3px 3px black;
+}
+
+.slogan {
+	font-family: 'Slackey', cursive;
+	font-size: 1.5rem;
+	color: #080808;
+	text-align: center;
+	padding: 0rem;
+}
+
+.centerdivcols {
+}
+
+#menuIMG {
+	width: 23rem;
+	object-fit: cover;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.colHeader {
+	font-family: 'Slackey', cursive;
+	font-size: 1rem;
+	color: #080808;
+	text-align: center;
+	padding: 1rem;
+}
+
+.menuItemP {
+	font-family: 'Slackey', cursive;
+	font-size: 1rem;
+	color: #080808;
+	text-align: center;
+	padding: 0.5rem;
+	background-color: lightgray;
+	border-bottom: darkgray 1px solid;
+	margin: 0;
+	text-align: left;
+}
+
+.olStyle {
+	list-style-type: none;
+}
+
+.bottomEnterMenu {
+	font-family: 'Slackey', cursive;
+	font-size: 1.5rem;
+	color: #080808;
+	text-align: center;
+	padding: 1rem;
+}
+
+.addMenuDiv {
+	position: relative;
+}
+
+#createmeal {
+	text-align: center;
+}
+
+.textAreaBottom {
+	width: 30rem;
+	height: 5rem;
+	resize: none;
+	background-color: transparent;
+	font-family: 'Slackey', cursive;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.buttonBottom {
+	font-family: 'Slackey', cursive;
+	font-size: 1rem;
+	color: #080808;
+	text-align: center;
+	padding: 0.5rem;
+	border-radius: 10px;
+}
+
+.buttonBottom:hover {
+	background-color: blue;
+	color: white;
+}
+
+#unDevouredBurger {
+	border-radius: 5px;
+	float: right;
+}
+
+#unDevouredBurger:hover {
+	background-color: blue;
+	color: white;
+}
