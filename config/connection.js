@@ -1,8 +1,8 @@
 const mysql = require('mysql');
-const connection;
+const connection = '';
 
 if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(proces.env.JAWSDB_URL)
+	connection = mysql.createConnection(proces.env.JAWSDB_URL);
 } else {
 	connection = mysql.createConnection({
 		host: 'localhost',
@@ -12,7 +12,6 @@ if (process.env.JAWSDB_URL) {
 		database: 'krusty_krab_db',
 	});
 }
-
 
 connection.connect(function (err) {
 	if (err) {
