@@ -1,19 +1,8 @@
 
-USE krusty_krab_db;
+USE scheduler;
 
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Krabby Patty', false);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Double Krabby Patty', false);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Tripple Krabby Patty', false);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Coral Bits', false);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Kelp Rings', false);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Krabby Meal', true);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Double Krabby Meal', true);
-INSERT INTO menu (menu_item, is_devour) 
-VALUES ('Tripple Krabby Meal', true);
+INSERT INTO eventtimes (hrtime, btnclass, timeindex) 
+VALUES ('9:00 AM', 'availTimeBox', 0);
+INSERT INTO eventtimes (hrtime, btnclass, timeindex) 
+VALUES ('9:30 AM', 'availTimeBox', 1);
+
